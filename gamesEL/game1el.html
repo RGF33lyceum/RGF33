@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Программирование</title>
+    <title>Задание 1 Электроника</title>
     <style>
-        /* Общие стили для всего тела */
         body {
-            background: linear-gradient(135deg, #1c1c1c, #333); /* Тёмный градиент */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background: #2e2e2e;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
+            text-align: center;
             box-sizing: border-box;
         }
 
-        /* Заголовок */
-        header {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 30px;
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
             color: #f5f5f5;
-            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
-            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        /* Кнопка "Вступление" */
-        .intro-button {
+        p {
+            font-size: 20px;
+            color: #c0c0c0;
             margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
         }
 
         button {
-            background: linear-gradient(135deg, #4caf50, #81c784); /* Зеленый градиент */
+            background: linear-gradient(135deg, #4caf50, #81c784);
             color: #ffffff;
             border: none;
-            padding: 14px 25px;
+            padding: 12px 24px;
             font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
@@ -49,84 +48,51 @@
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+            width: 250px;
         }
 
-        button:hover {
-            background: linear-gradient(135deg, #388e3c, #66bb6a); /* Темнее при наведении */
-            transform: scale(1.05);
+        button:hover:not(:disabled) {
+            background: linear-gradient(135deg, #388e3c, #66bb6a);
+            transform: translateY(-3px);
         }
 
-        /* Контейнер для кнопок */
-        .buttons-container {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        /* Обёртка кнопки и подписи */
-        .button-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Подписи под кнопками */
-        .label {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #ccc;
-            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Кнопка выхода */
-        .exit-button {
-            background: linear-gradient(135deg, #f44336, #e57373); /* Красный градиент */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 14px 30px;
-        }
-
-        .exit-button:hover {
-            background: linear-gradient(135deg, #d32f2f, #ef5350);
-            transform: scale(1.05);
+        button:disabled {
+            background: #555;
+            color: #aaa;
+            cursor: not-allowed;
         }
     </style>
 </head>
 <body>
-    <script src="stats.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            loadGameButtonState("programming"); // Загружаем состояние кнопок для категории "programming"
-        });
-    </script>
+    <h1>Что такое электрическая цепь?</h1>
+    <p>Электрическая цепь — это замкнутый путь, по которому течёт электрический ток.</p>
+    <h2>Что произойдёт, если разомкнуть цепь?</h2>
 
-    <header>Программирование</header>
-    <button class="intro-button" onclick="window.location.href = 'gamesProg/home.html'">Вступление</button>
-    <div class="buttons-container">
-        <div class="button-wrapper">
-            <button data-game-id="game1p" onclick="window.location.href = 'gamesPROG/game1prog.html'">1</button>
-            <span class="label">age 5+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game2p" onclick="window.location.href = 'gamesPROG/game2prog.html'">2</button>
-            <span class="label">age 8+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game3p" onclick="window.location.href = 'gamesProg/game3prog.html'">3</button>
-            <span class="label">age 10+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game4p" onclick="window.location.href = 'gamesProg/game4prog.html'">4</button>
-            <span class="label">age 12+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game5p" onclick="window.location.href = 'gamesProg/game5prog.html'">5</button>
-            <span class="label">age 15+</span>
-        </div>
-    </div>
-    <button class="exit-button" onclick="window.location.href = 'menu.html'">Выход</button>
+    <button onclick="checkAnswer('A')">A) Лампа загорится</button>
+    <button onclick="checkAnswer('B')">B) Ток перестанет течь</button>
+    <button onclick="checkAnswer('C')">C) Проводники нагреются</button>
+
+    <script src="../stats.js"></script>
+    <script>
+        const category = "electronics"; 
+        const gameId = "game1e"; 
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadGameButtonState(category, gameId);
+        });
+
+        function checkAnswer(answer) {
+            if (answer === 'B') {
+                alert("Правильно!");
+                gameCompletedWithButton(category, gameId); // Обновляем статистику только для правильного ответа
+                setTimeout(() => {
+                    window.location.href = '../GameEllectronic.HTML';
+                }, 1000);
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
 </body>
 </html>
