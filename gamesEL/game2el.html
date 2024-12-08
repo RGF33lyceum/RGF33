@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Программирование</title>
+    <title>Задание 2 Электроника</title>
     <style>
-        /* Общие стили для всего тела */
         body {
-            background: linear-gradient(135deg, #1c1c1c, #333); /* Тёмный градиент */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background: #2e2e2e;
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
+            text-align: center;
             box-sizing: border-box;
         }
 
-        /* Заголовок */
-        header {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 30px;
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
             color: #f5f5f5;
-            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
-            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        /* Кнопка "Вступление" */
-        .intro-button {
+        p {
+            font-size: 20px;
+            color: #c0c0c0;
             margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #dcdcdc;
+            margin-bottom: 20px;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         button {
-            background: linear-gradient(135deg, #4caf50, #81c784); /* Зеленый градиент */
+            background: linear-gradient(135deg, #4caf50, #81c784);
             color: #ffffff;
             border: none;
-            padding: 14px 25px;
+            padding: 12px 24px;
             font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
@@ -49,84 +56,64 @@
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+            width: 250px;
         }
 
         button:hover {
-            background: linear-gradient(135deg, #388e3c, #66bb6a); /* Темнее при наведении */
-            transform: scale(1.05);
+            background: linear-gradient(135deg, #388e3c, #66bb6a);
+            transform: translateY(-3px);
         }
 
-        /* Контейнер для кнопок */
-        .buttons-container {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            justify-content: center;
-            align-items: flex-start;
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
-        /* Обёртка кнопки и подписи */
-        .button-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
 
-        /* Подписи под кнопками */
-        .label {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #ccc;
-            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+            p {
+                font-size: 16px;
+            }
 
-        /* Кнопка выхода */
-        .exit-button {
-            background: linear-gradient(135deg, #f44336, #e57373); /* Красный градиент */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 14px 30px;
-        }
+            h2 {
+                font-size: 20px;
+            }
 
-        .exit-button:hover {
-            background: linear-gradient(135deg, #d32f2f, #ef5350);
-            transform: scale(1.05);
+            button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <script src="stats.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            loadGameButtonState("programming"); // Загружаем состояние кнопок для категории "programming"
-        });
-    </script>
+    <h1>Что даёт батарейка в цепи?</h1>
+    <p>Батарейка — это источник энергии, который заставляет ток двигаться по проводам.</p>
+    <h2>Что произойдёт, если постоянно подключать и отключать батарейку?</h2>
+    <button onclick="checkAnswer('A')">A) Лампа перестанет светиться</button>
+    <button onclick="checkAnswer('B')">B) Лампа станет ярче</button>
+    <button onclick="checkAnswer('C')">C) Лампа начнёт мигать</button>
 
-    <header>Программирование</header>
-    <button class="intro-button" onclick="window.location.href = 'gamesProg/home.html'">Вступление</button>
-    <div class="buttons-container">
-        <div class="button-wrapper">
-            <button data-game-id="game1p" onclick="window.location.href = 'gamesPROG/game1prog.html'">1</button>
-            <span class="label">age 5+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game2p" onclick="window.location.href = 'gamesPROG/game2prog.html'">2</button>
-            <span class="label">age 8+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game3p" onclick="window.location.href = 'gamesProg/game3prog.html'">3</button>
-            <span class="label">age 10+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game4p" onclick="window.location.href = 'gamesProg/game4prog.html'">4</button>
-            <span class="label">age 12+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game5p" onclick="window.location.href = 'gamesProg/game5prog.html'">5</button>
-            <span class="label">age 15+</span>
-        </div>
-    </div>
-    <button class="exit-button" onclick="window.location.href = 'menu.html'">Выход</button>
+    <script src="../stats.js"></script>
+    <script>
+        const category = "electronics"; 
+        const gameId = "game2e"; 
+
+        function checkAnswer(answer) {
+            if (answer === 'C') {
+                alert("Правильно!");
+                updateStats(category, gameId); 
+                setTimeout(() => {
+                    window.location.href = '../GameEllectronic.HTML'; 
+                }, 400);
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
 </body>
 </html>
