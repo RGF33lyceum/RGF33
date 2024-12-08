@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Задание 1 Программирование</title>
+    <style>
+        /* Общие стили для всего тела */
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #333); /* Тёмный градиент */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        /* Заголовки */
+        h1, h2 {
+            text-align: center;
+            color: #f5f5f5;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Абзац */
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #dcdcdc;
+        }
+
+        /* Контейнер для кнопок */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Кнопки */
+        button {
+            background: linear-gradient(135deg, #4caf50, #81c784); /* Зеленый градиент */
+            color: #ffffff;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #388e3c, #66bb6a); /* Темнее при наведении */
+            transform: scale(1.05);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 12px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Оператор присваивания</h1>
+    <p>Чтобы присвоить переменной число, нужно воспользоваться "=" (например, a = 0).</p>
+    <h2>Как присвоить переменной b значение 3?</h2>
+
+    <!-- Контейнер кнопок -->
+    <div class="buttons-container">
+        <button onclick="checkAnswer('A')">A) b 3</button>
+        <button onclick="checkAnswer('B')">B) b=3</button>
+        <button onclick="checkAnswer('C')">C) b==3</button>
+    </div>
+
+    <!-- Подключаем stats.js -->
+    <script src="../stats.js"></script>
+    <script>
+        const category = "programming"; 
+        const gameId = "game1p"; 
+
+        function checkAnswer(answer) {
+            if (answer === 'B') {
+                alert("Правильно!");
+                updateStats(category, gameId); 
+                setTimeout(() => {
+                    window.location.href = '../GameProgramm.HTML';
+                }, 200);
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
 </body>
 </html>
