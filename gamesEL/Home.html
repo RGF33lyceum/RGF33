@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Программирование</title>
+    <title>Вступление</title>
     <style>
-        /* Общие стили для всего тела */
+        /* Общий стиль для страницы */
         body {
-            background: linear-gradient(135deg, #1c1c1c, #333); /* Тёмный градиент */
+            background: linear-gradient(135deg, #1c1c1c, #333); /* Темно-серый градиент */
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #ffffff;
             box-sizing: border-box;
+            padding: 20px;
         }
 
         /* Заголовок */
-        header {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 32px;
+        h1 {
+            font-size: 48px;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             color: #f5f5f5;
             text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
             text-transform: uppercase;
         }
 
-        /* Кнопка "Вступление" */
-        .intro-button {
+        /* Подзаголовок */
+        h2 {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: #2F4F4F;
+            text-align: justify;
+            max-width: 800px;
+            line-height: 1.8;
             margin-bottom: 30px;
         }
 
-        button {
-            background: linear-gradient(135deg, #4caf50, #81c784); /* Зеленый градиент */
-            color: #ffffff;
+        /* Кнопка перехода */
+        .navigate-button {
+            background: linear-gradient(135deg, #FF4500, #FF6347); /* Красный градиент */
+            color: white;
             border: none;
-            padding: 14px 25px;
+            padding: 15px 30px;
             font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
@@ -51,82 +61,40 @@
             transition: background 0.3s ease, transform 0.2s ease;
         }
 
-        button:hover {
-            background: linear-gradient(135deg, #388e3c, #66bb6a); /* Темнее при наведении */
+        .navigate-button:hover {
+            background: linear-gradient(135deg, #f44336, #e57373); /* Темнее при наведении */
             transform: scale(1.05);
         }
 
-        /* Контейнер для кнопок */
-        .buttons-container {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-            justify-content: center;
-            align-items: flex-start;
-        }
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 26px;
+            }
 
-        /* Обёртка кнопки и подписи */
-        .button-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+            h2 {
+                font-size: 16px;
+                padding: 6px;
+            }
 
-        /* Подписи под кнопками */
-        .label {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #ccc;
-            text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Кнопка выхода */
-        .exit-button {
-            background: linear-gradient(135deg, #f44336, #e57373); /* Красный градиент */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 14px 30px;
-        }
-
-        .exit-button:hover {
-            background: linear-gradient(135deg, #d32f2f, #ef5350);
-            transform: scale(1.05);
+            .navigate-button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <script src="stats.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            loadGameButtonState("programming"); // Загружаем состояние кнопок для категории "programming"
-        });
-    </script>
+    <h1>Электроника</h1>
+    <h2>
+        Электроника окружает нас повсюду! Она помогает нам включать свет, слушать музыку, играть в игры и даже отправлять сообщения друзьям. 
+        Но что же это такое? Электроника – это наука о том, как электричество помогает нам делать удивительные вещи. 
+        Представьте себе электрический поток, похожий на маленькие быстрые реки, которые текут по проводам и дают энергию для работы разных устройств. 
+        Сегодня мы узнаем, как работают эти "электрические реки", что такое батарейки, кнопки, лампочки и даже микросхемы. 
+        Готовы отправиться в мир электроники и стать настоящими маленькими изобретателями?
+    </h2>
 
-    <header>Программирование</header>
-    <button class="intro-button" onclick="window.location.href = 'gamesProg/home.html'">Вступление</button>
-    <div class="buttons-container">
-        <div class="button-wrapper">
-            <button data-game-id="game1p" onclick="window.location.href = 'gamesPROG/game1prog.html'">1</button>
-            <span class="label">age 5+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game2p" onclick="window.location.href = 'gamesPROG/game2prog.html'">2</button>
-            <span class="label">age 8+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game3p" onclick="window.location.href = 'gamesProg/game3prog.html'">3</button>
-            <span class="label">age 10+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game4p" onclick="window.location.href = 'gamesProg/game4prog.html'">4</button>
-            <span class="label">age 12+</span>
-        </div>
-        <div class="button-wrapper">
-            <button data-game-id="game5p" onclick="window.location.href = 'gamesProg/game5prog.html'">5</button>
-            <span class="label">age 15+</span>
-        </div>
-    </div>
-    <button class="exit-button" onclick="window.location.href = 'menu.html'">Выход</button>
+    <!-- Кнопка перехода -->
+    <button class="navigate-button" onclick="window.location.href = 'game1el.html'">Перейти к заданию</button>
 </body>
 </html>
