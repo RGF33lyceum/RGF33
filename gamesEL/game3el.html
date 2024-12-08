@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Задание 3 Электроника</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2e2e2e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 20px;
+            color: #c0c0c0;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #dcdcdc;
+            margin-bottom: 20px;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin: 10px;
+            width: 250px;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #388e3c, #66bb6a);
+            transform: translateY(-3px);
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Что такое резистор?</h1>
+    <p>Резистор — это компонент, который ограничивает силу тока в цепи. Он используется для защиты других компонентов от перегрузки. Сопротивление резистора измеряется в Омах (Ω).</p>
+    <h2>Какую роль выполняет резистор в цепи?</h2>
+    <button onclick="checkAnswer('A')">A) Увеличивает ток.</button>
+    <button onclick="checkAnswer('B')">B) Ограничивает ток.</button>
+    <button onclick="checkAnswer('C')">C) Генерирует ток.</button>
+
+    <script src="../stats.js"></script>
+    <script>
+        const category = "electronics"; 
+        const gameId = "game3e"; 
+
+        function checkAnswer(answer) {
+            if (answer === 'B') {
+                alert("Правильно!");
+                updateStats(category, gameId); 
+                setTimeout(() => {
+                    window.location.href = '../GameEllectronic.HTML'; 
+                }, 400);
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
 </body>
 </html>
