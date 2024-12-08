@@ -12,7 +12,7 @@
       games3el.html
       games4el.html
       games5el.html
-    gamesPROG
+    gamesPROG: папка с играми про программирование
       games1prog.html
       games2prog.html
       games3prog.html
