@@ -1,0 +1,63 @@
+/* Общий стиль для страницы */
+body {
+    background: linear-gradient(to bottom right, #F0F8FF, #ADD8E6); /* Светлый градиентный фон */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стиль заголовка */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2F4F4F; /* Темно-серый цвет для хорошего контраста */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для улучшения видимости */
+}
+
+/* Стиль кнопок */
+button {
+    background-color: #87CEEB; /* Голубой цвет кнопок */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень для кнопок */
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+}
+
+/* Эффект при наведении на кнопки */
+button:hover {
+    background-color: #5DADE2; /* Более темный голубой при наведении */
+    transform: scale(1.05);
+}
+
+/* Стиль кнопки "Выход" */
+.exit-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #FF6347; /* Ярко-оранжевый цвет */
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Эффект при наведении на кнопку "Выход" */
+.exit-button:hover {
+    background-color: #FF4500; /* Яркий красный при наведении */
+    transform: scale(1.05);
+}
+

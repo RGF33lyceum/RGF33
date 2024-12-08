@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Что даёт батарейка в цепи?</h1>
+    <p>Батарейка — это источник энергии, который заставляет ток двигаться по проводам.</p>
+    <h2>Что произойдёт, постоянно подключать и отключать батарейку</h2>
+    <button onclick="checkAnswer('A')">A) Лампа перестанет светиться</button>
+    <button onclick="checkAnswer('B')">B) Лампа станет ярче</button>
+    <button onclick="checkAnswer('C')">C) Лампа начнёт мигать</button>
+
+    <script src="../stats.js"></script>
+    <script>
+        const category = "electronics"; 
+        const gameId = "game2"; 
+
+        function checkAnswer(answer) {
+            if (answer === 'C') {
+                alert("Правильно!");
+                updateStats(category, gameId); 
+                setTimeout(() => {
+                    window.location.href = '../GameEllectronic.HTML'; 
+                }, 1000);
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
+</body>
+</html>
+
+</html>

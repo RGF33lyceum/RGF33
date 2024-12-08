@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>Что такое электрическая цепь?</h1>
+    <p>Электрическая цепь — это замкнутый путь, по которому течёт электрический ток.</p>
+    <h2>Что произойдёт, если разомкнуть цепь?</h2>
+
+    <button onclick="checkAnswer('A')">A) Лампа загорится</button>
+    <button onclick="checkAnswer('B')">B) Ток перестанет течь</button>
+    <button onclick="checkAnswer('C')">C) Проводники нагреются</button>
+
+    <script src="../stats.js"></script>
+    <script>
+        const category = "electronics";
+        const gameId = "game1";
+
+        function checkAnswer(answer) {
+            if (answer === 'B') {
+                alert("Правильно!");
+                if (updateStats(category, gameId)) {
+                    setTimeout(() => {
+                        window.location.href = '../GameEllectronic.HTML';
+                    }, 1000);
+                }
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
+</body>
+</html>

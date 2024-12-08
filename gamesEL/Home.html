@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+    <style>
+        /* Общий стиль для страницы */
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #333); /* Темно-серый градиент */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        /* Заголовок */
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+            text-transform: uppercase;
+        }
+
+        /* Подзаголовок */
+        h2 {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: #2F4F4F;
+            text-align: justify;
+            max-width: 800px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* Кнопка перехода */
+        .navigate-button {
+            background: linear-gradient(135deg, #FF4500, #FF6347); /* Красный градиент */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .navigate-button:hover {
+            background: linear-gradient(135deg, #f44336, #e57373); /* Темнее при наведении */
+            transform: scale(1.05);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .navigate-button {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Электроника</h1>
+    <h2>
+        Электроника окружает нас повсюду! Она помогает нам включать свет, слушать музыку, играть в игры и даже отправлять сообщения друзьям. 
+        Но что же это такое? Электроника – это наука о том, как электричество помогает нам делать удивительные вещи. 
+        Представьте себе электрический поток, похожий на маленькие быстрые реки, которые текут по проводам и дают энергию для работы разных устройств. 
+        Сегодня мы узнаем, как работают эти "электрические реки", что такое батарейки, кнопки, лампочки и даже микросхемы. 
+        Готовы отправиться в мир электроники и стать настоящими маленькими изобретателями? Тогда начнем! 🌟
+    </h2>
+
+    <!-- Кнопка перехода -->
+    <button class="navigate-button" onclick="window.location.href = 'nextpage.html'">Перейти к следующему заданию</button>
+</body>
+</html>

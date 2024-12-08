@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2e2e2e; /* Темно-серый фон */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #ffffff; /* Белый текст */
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 44px;
+            font-weight: 800;
+            text-align: center;
+            color: #f5f5f5; /* Светло-серый текст */
+            letter-spacing: 2px; /* Межбуквенное расстояние */
+            text-transform: uppercase; /* Заглавные буквы */
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5); /* Тень текста */
+            margin-bottom: 40px;
+        }
+
+        /* Контейнер для кнопок */
+        button {
+            background: linear-gradient(135deg, #4caf50, #81c784); /* Зеленый градиент */
+            color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #388e3c, #66bb6a); /* Темнее при наведении */
+            transform: translateY(-3px); /* Поднятие кнопки */
+        }
+
+        .exit-button {
+            background: linear-gradient(135deg, #f44336, #e57373); /* Красный градиент для кнопки выхода */
+        }
+
+        .exit-button:hover {
+            background: linear-gradient(135deg, #d32f2f, #ef5350); /* Темнее при наведении */
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 12px 24px;
+            }
+        }
+
+        /* Убираем выделение кнопок при нажатии */
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Выберите категорию</h1>
+    <button onclick="window.location.href = 'GameEllectronic.HTML'">Электроника</button>
+    <button onclick="window.location.href = 'GameProgramm.HTML'">Программирование</button>
+    <button class="exit-button" onclick="window.location.href = 'index.html';">Выход</button>
+</body>
+</html>
