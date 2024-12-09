@@ -44,7 +44,7 @@
         Кнопка "Выход" для возврата на главную страницу.
 
     
-4. Страницы игр (GameProgramm.HTML и GameEllectronic.HTML)
+3. Страницы игр (GameProgramm.HTML и GameEllectronic.HTML)
    
 Функции:
 
