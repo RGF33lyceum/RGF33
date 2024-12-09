@@ -1,103 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Вступление</title>
-        <style>
-            /* Общий стиль для страницы */
-            body {
-                background: linear-gradient(135deg, #1c1c1c, #333); /* Темно-серый градиент */
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                color: #ffffff;
-                box-sizing: border-box;
-                padding: 20px;
-            }
-    
-            /* Заголовок */
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5 Программирование</title>
+    <style>
+        /* Общие стили для всего тела */
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #333); /* Тёмный градиент */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        /* Заголовки */
+        h1, h2 {
+            text-align: center;
+            color: #f5f5f5;
+            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Абзац */
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #dcdcdc;
+        }
+
+        /* Контейнер для кнопок */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Кнопки */
+        button {
+            background: linear-gradient(135deg, #4caf50, #81c784); /* Зеленый градиент */
+            color: #ffffff;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #388e3c, #66bb6a); /* Темнее при наведении */
+            transform: scale(1.05);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
             h1 {
-                font-size: 48px;
-                font-weight: 700;
-                text-align: center;
-                margin-bottom: 20px;
-                color: #f5f5f5;
-                text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
-                text-transform: uppercase;
+                font-size: 28px;
             }
-    
-            /* Подзаголовок */
+
             h2 {
-                background: rgba(255, 255, 255, 0.9);
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                font-size: 18px;
-                color: #2F4F4F;
-                text-align: justify;
-                max-width: 800px;
-                line-height: 1.8;
-                margin-bottom: 30px;
+                font-size: 20px;
             }
-    
-            /* Кнопка перехода */
-            .navigate-button {
-                background: linear-gradient(135deg, #FF4500, #FF6347); /* Красный градиент */
-                color: white;
-                border: none;
-                padding: 15px 30px;
-                font-size: 16px;
-                font-weight: 600;
-                text-transform: uppercase;
-                border-radius: 8px;
-                cursor: pointer;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                transition: background 0.3s ease, transform 0.2s ease;
+
+            button {
+                font-size: 14px;
+                padding: 12px 20px;
             }
-    
-            .navigate-button:hover {
-                background: linear-gradient(135deg, #f44336, #e57373); /* Темнее при наведении */
-                transform: scale(1.05);
-            }
-    
-            /* Адаптивность */
-            @media (max-width: 600px) {
-                h1 {
-                    font-size: 32px;
-                }
-    
-                h2 {
-                    font-size: 16px;
-                    padding: 15px;
-                }
-    
-                .navigate-button {
-                    padding: 12px 25px;
-                    font-size: 14px;
-                }
-            }
-        </style>
-    </head>
+        }
+    </style>
+</head>
 <body>
-    <h1>Программирование</h1>
-    <h2>
-        Привет,Я робот КЕСЯ и я буду помогать в обучении программированию на Python.<br> 
-        
-            Python-один из самых популярных языков программирования,на котором пишут различные программы как:<br> 
+    <h1>Умножение и деление</h1>
+    <p>Умножение мы делаем с помощью знака "*".В случаи с делением тяжелей.Есть знак деление целой части "/". И есть знак деления остатка "%".</p>
+    <h2>Что получим при a/b,a%b, при переменной том a=6 и переменной b=5?</h2>
 
-        -Веб-приложения и сайты<br> 
-        -Десктопные и мобильные приложения<br> 
-        -Компьютерные игры<br> 
-        -Автоматизация<br> 
-    </h2>
+    <!-- Кнопки с ответами -->
+    <div class="buttons-container">
+        <button onclick="checkAnswer('A')">A) 1:1 </button>
+        <button onclick="checkAnswer('B')">B) 1:2 </button>
+        <button onclick="checkAnswer('C')">C) 1:0 </button>
+    </div>
 
-    <!-- Кнопка перехода -->
-    <button class="navigate-button" onclick="window.location.href = 'game1prog.html'">Перейти к следующему заданию</button>
+    <!-- Подключаем stats.js -->
+    <script src="../stats.js"></script>
+    <script>
+        const category = "programming"; 
+        const gameId = "game5p"; 
+
+        function checkAnswer(answer) {
+            if (answer === 'A') {
+                alert("Правильно!");
+                updateStats(category, gameId)
+                    // Возвращаемся в меню
+                    setTimeout(() => {
+                        window.location.href = '../GameProgramm.HTML';
+                    }, 200);
+            } else {
+                alert("Неправильно, попробуйте ещё раз!");
+            }
+        }
+    </script>
 </body>
 </html>
